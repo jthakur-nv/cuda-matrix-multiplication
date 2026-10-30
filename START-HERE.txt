@@ -1,0 +1,34 @@
+MATRIX LAB - FROM C++ TO CUDA
+
+Open index.html in Microsoft Edge, Chrome, or Firefox.
+If you downloaded the ZIP, extract the entire folder first.
+Keep index.html, style.css, app.js, and matmul.cu together.
+
+No installation, build step, or local server is required.
+An optional web font uses Google Fonts; system fonts work offline.
+
+Included:
+- Interactive row-by-column matrix multiplication example.
+- Seven detailed beginner chapters with annotated code and trade-offs.
+- Exact supplied N=256 timings and throughput for all nine variants.
+- Sortable results, CPU/GPU filtering, selectable speedup baseline, CSV export.
+- Resource and theoretical occupancy table with explanations.
+- Measurement limitations, glossary, and suggested profiling experiments.
+- Original runnable CUDA C++ source, downloadable from the site.
+
+Validation:
+Tested in headless Microsoft Edge at widths 390, 768, and 1440 pixels.
+Checked all seven chapters, matrix cell interaction, both result filters,
+baseline switching, time sorting, CSV export, and measurement details.
+No JavaScript runtime errors or page-wide horizontal overflow were found.
+The tables and code blocks scroll horizontally on small screens.
+
+Hosting:
+This is a local website. Hosted publication could not proceed because Sites
+is not enabled for this workspace. No live URL was created.
+
+Data:
+Source: user-supplied console output, N=256, 5 iterations, FP32.
+GPU: NVIDIA RTX PRO 3000 Blackwell Generation Laptop GPU (compute 12.0).
+Reported numbers are a single run, not a controlled profiling study.
+The shared16 timing is retained and identified for repeated measurement.
