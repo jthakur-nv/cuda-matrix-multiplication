@@ -1,0 +1,50 @@
+MATRIX LAB: MATRIX MULTIPLICATION IN C++ AND CUDA
+
+Open index.html in a browser. Extract the whole folder first if it is in a ZIP.
+Keep the HTML, CSS, JavaScript files, and matmul.cu together.
+The separate matrix-lab.html file embeds the tutorial and its data in one file.
+No installation or local server is needed to read the site.
+An optional Google Fonts stylesheet falls back to system fonts offline.
+
+READING ORDER
+1. Work through a row-by-column multiplication and the row-major array layout.
+2. Follow the seven implementation chapters, from CPU loops to cuBLAS.
+3. Step through the interactive examples beside the code.
+   The naive CUDA chapter shows a complete 20x20 output matrix linked to a
+   16x16 thread-block view. Click a cell or enable padding to inspect the
+   32x32 launched area and its out-of-bounds threads.
+   The shared-memory chapter follows four threads through loading, barriers,
+   multiplication, and the final store using complete 4x4 input matrices.
+4. Compare matrix sizes, launch methods, and profiler counters.
+5. Use the reference timing table to compare CPU and GPU implementations.
+
+BENCHMARK RECORDS
+Size sweep: 12 dimensions, six implementations, two launch methods,
+seven trial averages of twenty multiplications each. Collected Nov. 1, 2026.
+Four Nsight Systems traces and twenty main Nsight Compute captures provide
+the execution intervals and hardware counters shown in the tutorial.
+
+CPU/GPU reference benchmark: N=2048, averages of fifty multiplications.
+This record uses a different timing protocol from the size sweep. Its method
+and CPU-baseline limitations are documented beside the table.
+
+Hardware: NVIDIA RTX PRO 3000 Blackwell Generation Laptop GPU, 46 SMs.
+Precision: FP32. Each dataset states its measurement and validation method.
+The interactive exercises use small illustrative matrices; they do not execute
+CUDA or generate new benchmark measurements in the browser.
+
+PROFILER FIGURES
+The Profiler figures gallery contains four high-resolution PNG charts drawn
+from the saved Nsight Systems and Nsight Compute exports. Select a figure,
+click the image for full resolution, or download its PNG. Each chart states
+the metric, units, source reports, and capture settings.
+The images are also embedded in the standalone matrix-lab.html file.
+
+SOURCE AND REPRODUCTION
+Use the source download links to obtain matmul.cu.
+The profiling bundle includes raw measurements, Nsight reports, collection
+scripts, analysis code, and build information. Consult profiling/READ-ME.txt
+for commands, dependencies, and measurement limits.
+
+The site has been checked at desktop, tablet, and phone widths. Tables, code,
+and plots scroll sideways on small screens when necessary.
